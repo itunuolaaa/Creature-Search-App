@@ -36,10 +36,10 @@ const creatures = {
     let creature;
   
     if (!isNaN(rawInput)) {
-      // Search by ID
+      // To search by ID
       creature = Object.values(creatures).find(c => c.id == rawInput);
     } else {
-      // Search by name (case-insensitive)
+      // To search by name (case-insensitive)
       creature = creatures[rawInput.toLowerCase()];
     }
   
@@ -56,7 +56,6 @@ const creatures = {
     document.getElementById("weight").textContent = creature.weight;
     document.getElementById("height").textContent = creature.height;
   
-    // Add creature types as <span> elements
     creature.types.forEach(type => {
       const typeEl = document.createElement("span");
       typeEl.textContent = type;
